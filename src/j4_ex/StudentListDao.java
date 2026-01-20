@@ -57,10 +57,10 @@ public class StudentListDao {
 			//発行するSQL文の生成（SELECT）
 			StringBuffer buf = new StringBuffer();
 			buf.append(" SELECT                ");
-			buf.append("   student_id     ,    ");
 			buf.append("   student_name   ,    ");
 			buf.append("   gender         ,    ");
-			buf.append("   age         		   ");
+			buf.append("   age         	  ,    ");
+			buf.append("   career_mon          ");
 			buf.append(" FROM          		   ");
 			buf.append("   uzuz_student        ");
 			
@@ -73,10 +73,10 @@ public class StudentListDao {
 			//ResultSetオブジェクトから1レコード分のデータをDTOに格納
 			while(rs.next()){
 				StudentListDto dto = new StudentListDto();
-				dto.setId(     rs.getInt(    "student_id"     ) );
 				dto.setName(   rs.getString( "student_name"   ) );
 				dto.setGender( rs.getString( "gender" ) );
 				dto.setAge(    rs.getInt(    "age"    ) );
+				dto.setCareer_mon(rs.getInt("career_mon"));
 				dtoList.add(dto);
 			}
 		} catch (SQLException e) {

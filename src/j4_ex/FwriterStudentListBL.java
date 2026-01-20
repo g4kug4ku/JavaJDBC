@@ -15,13 +15,13 @@ public class FwriterStudentListBL {
 		if (dtoList != null) {
 			for (int i = 0; i < dtoList.size(); i++) {
 				StringBuffer rsbuf = new StringBuffer();
-				rsbuf.append(dtoList.get(i).getId());
-				rsbuf.append(COMMA);
 				rsbuf.append(dtoList.get(i).getName());
 				rsbuf.append(COMMA);
 				rsbuf.append(dtoList.get(i).getGender());
 				rsbuf.append(COMMA);
 				rsbuf.append(dtoList.get(i).getAge());
+				rsbuf.append(COMMA);
+				rsbuf.append(dtoList.get(i).getCareer_mon());
 
 				System.out.println(rsbuf.toString());
 			}
