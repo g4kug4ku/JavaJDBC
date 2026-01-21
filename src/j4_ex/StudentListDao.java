@@ -56,13 +56,17 @@ public class StudentListDao {
 
 			//発行するSQL文の生成（SELECT）
 			StringBuffer buf = new StringBuffer();
-			buf.append(" SELECT                ");
-			buf.append("   student_name   ,    ");
-			buf.append("   gender         ,    ");
-			buf.append("   age         	  ,    ");
-			buf.append("   career_mon          ");
-			buf.append(" FROM          		   ");
-			buf.append("   uzuz_student        ");
+			buf.append(" SELECT                                                                  ");
+			buf.append("   uzuz_student.student_name   ,                                         ");
+			buf.append("   uzuz_student.gender         ,                                         ");
+			buf.append("   uzuz_student.age            ,                                         ");
+			buf.append("   uzuz_student.career_mon     ,                                         ");
+			buf.append("   branch.branch_name          ,                                         ");
+			buf.append("   course.course_name                                                    ");
+			buf.append(" FROM          		                                                     ");
+			buf.append("   (branch INNER JOIN uzuz_student                                       ");
+			buf.append("          ON uzuz_student.branch_id = branch.branch_id)                  ");
+			buf.append("          LEFT JOIN course ON uzuz_student.course_id = course.course_id ");
 			
 			//PreparedStatement（SQL発行用オブジェクト）を生成＆発行するSQLをセット
 			ps = con.prepareStatement(buf.toString());
@@ -77,6 +81,8 @@ public class StudentListDao {
 				dto.setGender( rs.getString( "gender" ) );
 				dto.setAge(    rs.getInt(    "age"    ) );
 				dto.setCareer_mon(rs.getInt("career_mon"));
+				dto.setBranch(rs.getString("branch_name"));
+				dto.setCourse(rs.getString("course_name"));
 				dtoList.add(dto);
 			}
 		} catch (SQLException e) {

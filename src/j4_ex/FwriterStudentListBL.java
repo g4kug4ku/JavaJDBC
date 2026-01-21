@@ -22,6 +22,10 @@ public class FwriterStudentListBL {
 				rsbuf.append(dtoList.get(i).getAge());
 				rsbuf.append(COMMA);
 				rsbuf.append(dtoList.get(i).getCareer_mon());
+				rsbuf.append(COMMA);
+				rsbuf.append(dtoList.get(i).getBranch());
+				rsbuf.append(COMMA);
+				rsbuf.append(dtoList.get(i).getCourse());
 
 				System.out.println(rsbuf.toString());
 			}
