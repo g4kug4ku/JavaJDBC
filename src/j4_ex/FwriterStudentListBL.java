@@ -8,7 +8,7 @@ import java.util.List;
 public class FwriterStudentListBL {
 
 	//定数の定義
-	final String FILE_PATH = "D:\\Javaデータベース活用編\\J4-EX_総合演習（JDBC）\\j4-EX_1.csv"; //書き出し用ファイルのパス情報
+	final String FILE_PATH = "D:\\workspace\\JavaJDBC\\src\\j4_ex\\j4-EX_1.csv"; //書き出し用ファイルのパス情報
 	final String NEW_LINE = System.getProperty("line.separator"); //改行
 	final String COMMA = ","; // コンマ
 
@@ -45,6 +45,7 @@ public class FwriterStudentListBL {
 	        	fileWriter.write(NEW_LINE);
 	        }
 	        
+	        fileWriter.write(NEW_LINE);
 	        fileWriter.write(NEW_LINE);
 	        
 	        fileWriter.close();

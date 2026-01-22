@@ -21,7 +21,7 @@ public class FWriterStudentsCountByCourseBL {
 			File file = new File(FILE_PATH);
 
 			//書き出し用ファイルをFileWriterにセット
-			FileWriter fileWriter = new FileWriter(file); //trueを指定すると追記が可能になる
+			FileWriter fileWriter = new FileWriter(file, true); //trueを指定すると追記が可能になる
 
 			fileWriter.write("#--集計結果--");
 			fileWriter.write(NEW_LINE);
@@ -36,8 +36,6 @@ public class FWriterStudentsCountByCourseBL {
 				fileWriter.write(String.valueOf(CoursedtoList.get(i).getStudentCount()));
 				fileWriter.write(NEW_LINE);
 			}
-
-			fileWriter.write(NEW_LINE);
 
 			fileWriter.close();
 

@@ -1,3 +1,20 @@
+#--受講生一覧--
+名前, 性別, 年齢, 職歴, 登録支店, 受講講座
+ikeda,男性,29,4年,tokyo,development
+abe,男性,23,3か月,saitama,development
+ogawa,男性,26,1年,kanagawa,受講なし
+ogino,男性,28,2年6か月,kanagawa,受講なし
+itou,女性,22,4か月,aichi,infra
+tanaka,男性,25,職歴なし,chiba,infra
+suzuki,女性,23,10か月,saitama,受講なし
+ogawa,女性,22,4か月,chiba,development
+kan,女性,22,3か月,tokyo,development
+amano,男性,21,11か月,aichi,development
+nishino,女性,24,1年1か月,osaka,infra
+umeno,男性,25,3か月,saitama,development
+adachi,女性,27,2年6か月,tokyo,sales
+
+
 #--集計結果--
 登録支店, 受講講座, 受講者数
 aichi,development,1
@@ -8,4 +25,3 @@ osaka,infra,1
 saitama,development,2
 tokyo,development,2
 tokyo,sales,1
-
