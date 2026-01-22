@@ -6,6 +6,9 @@ public class FWriterStudentInfoMain {
 		
 		FwriterStudentListBL bl = new FwriterStudentListBL();
 		bl.extractAll();
+		
+		FWriterStudentsCountByCourseBL cbl = new FWriterStudentsCountByCourseBL();
+		cbl.extractAll();
 
 	}
 

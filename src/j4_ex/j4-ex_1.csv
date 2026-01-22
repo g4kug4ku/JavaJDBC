@@ -1,0 +1,11 @@
+#--集計結果--
+登録支店, 受講講座, 受講者数
+aichi,development,1
+aichi,infra,1
+chiba,development,1
+chiba,infra,1
+osaka,infra,1
+saitama,development,2
+tokyo,development,2
+tokyo,sales,1
+
